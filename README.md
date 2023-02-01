@@ -96,7 +96,7 @@ Copy your chroot environment to sda3 (mmcblk0p3), put the card in the board, pro
 
 Note: I found that a small heatsink improves FPG'a stability. Also placing the board inside the computer room (18 Celsious) helped a lot ;)
 
-![Screenshot](Clipboard02.jpg)
+![Screenshot](vncviewer-snapshot.jpg)
 
 
 ![Screenshot](without_liteUart.jpg)
