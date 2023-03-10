@@ -64,7 +64,8 @@ before you compile the kernel.
 	                 the system crawls to it's knees, and never boots. If I delete the "interrupts" line for liteuart in DTS, the system boots and
 			 getty on liteuart is pretty stable, but then ethernet is not working (says it is ok but nothing happens). As a workaround I used a
 			 quick&dirty trick, I I hardcoded "port->irq = 0"; at the top of liteuart_startup, so to force the driver to use timer_setup instead.
-			 This way both liteuart and liteeth are happy.
+			 This way both liteuart and liteeth are happy. 
+	2023-03-10: another way is to use sbi/hvc0 , see at https://github.com/roryt12/qmtech_wukong_debian_on_litex_naxriscv
 
 9) Build BBL with the correct DTS file. Copy the resulting boot.bin in the first (VFAT) partition of the SDcard
 
