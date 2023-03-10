@@ -37,7 +37,12 @@ I included ethernet, video terminal and an sdcard.  The command I used were :
 	     >  qmtech_wukong-rocket.log 2>&1 &
 ```
 
-5) I used the provided nexys4ddr_fpu.dts as prototype to make the corresponding file for the board. The main difference is the 256MB (vs 128MB) DRAM chip and the clock. The file qmtech_wukon-rocket.csv and qmtech_wukong-rocket.json are very useufull to confirm that the DTS is correct.
+5) **With the new commits, this step has been very easy.** Just run :
+```
+   litex_json2dts_linux --root-device mmcblk0p3 qmtech_wukong-rocket.json > qmtech_wukong_fulld-100M.dts
+```
+
+~~I used the provided nexys4ddr_fpu.dts as prototype to make the corresponding file for the board. The main difference is the 256MB (vs 128MB) DRAM chip and the clock. The file qmtech_wukon-rocket.csv and qmtech_wukong-rocket.json are very useufull to confirm that the DTS is correct.~~
 
 6) Also I modified the linux boot line. I boot without an initrd, directly from the SDcard. I have 3 partitions:  sda1 (mmcblck0p1) with VFAT for booting (where boot.bin is placed), sda2 (mmcblck0p2) as a 8GB swap, and sda3 (mmcblck0p3) as ext4 root filesystem.
 
