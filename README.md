@@ -41,6 +41,8 @@ I included ethernet, video terminal and an sdcard.  The command I used were :
 ```
    litex_json2dts_linux --root-device mmcblk0p3 qmtech_wukong-rocket.json > qmtech_wukong_fulld-100M.dts
 ```
+and then edit manually the produced dts to change/correct/add things - see mine to compare.
+
 
 ~~I used the provided nexys4ddr_fpu.dts as prototype to make the corresponding file for the board. The main difference is the 256MB (vs 128MB) DRAM chip and the clock. The file qmtech_wukon-rocket.csv and qmtech_wukong-rocket.json are very useufull to confirm that the DTS is correct.~~
 
